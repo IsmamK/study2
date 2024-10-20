@@ -1,6 +1,42 @@
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+#card-section {
+  height: 100vh; /* Take full screen height */
+  overflow-y: hidden; /* Default to hidden */
+}
+
+#card-section.overflow-y-scroll {
+  overflow-y: auto; /* Enable scrolling when the card section is in view */
+  scroll-behavior: smooth; /* Smooth scrolling for the cards */
+}
+
+
+.gradient-spiral {
+  background: conic-gradient(
+    black 0deg, 
+    gray 120deg, 
+    black 240deg,
+    gray 360deg
+  );
+}
+
+
+
+/* Animation for the spiral effect */
+@keyframes rotate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
 
 /* Animation Classes Overview */
 .goblin-one {
