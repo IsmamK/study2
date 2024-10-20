@@ -35,7 +35,7 @@ const Cards = () => {
     >
       <div className="flex flex-col items-center px-4 relative">
         {/* Headline */}
-        <h1 className="text-center text-7xl font-extrabold mb-20">
+        <h1 className="text-center text-3xl md:text-5xl lg:text-7xl font-extrabold mb-20">
           {startTypewriter && ( // Start typewriter only when scrolled into view
             <Typewriter
               words={[`What We Offer `]}
@@ -58,7 +58,7 @@ const Cards = () => {
             afterAnimatedIn={() => setStartTypewriter(true)} // Trigger when the scroll animation starts
             >
             <div className='border-4 p-2 h-full  border-yellow-500 bg-black rounded-2xl move-up'>
-            <div key={card.id} className="card bg-gradient-to-r  from-gray-600 to-gray-800 p-5 h-full w-96 drop-shadow-gold gap-5 relative" >
+            <div key={card.id} className="card bg-gradient-to-r  from-gray-600 to-gray-800 p-5 h-full w-full drop-shadow-gold gap-5 relative" >
             <div className='absolute transform -translate-x-1/2 -translate-y-1/2 top-0 left-1/2 rounded-[100%] bg-gradient-to-r from-gray-400 to-gray-700 w-32 h-32 flex items-center justify-center'>
   <div className='rounded-[100%] bg-black w-28 h-28 flex items-center justify-center'>
     <img
