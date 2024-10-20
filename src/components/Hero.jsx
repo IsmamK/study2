@@ -8,15 +8,15 @@ const Hero = () => {
     <div className="hero bg-black text-yellow-500 relative goblin-one">
 
 
-        <div className='lg:hidden absolute -top-60 -left-20 slide-in-left'>
+        <div className='lg:hidden overflow-hidden absolute -top-48  -left-20 slide-in-left'>
                   
-            <img src="curve1.png " className='rotate-[20deg] ' alt="" />
+            <img src="curve1copy.png " className='rotate-[20deg] ' alt="" />
        
         </div> 
 
 
-                    <div className='hidden lg:block absolute -left-96 -top-[500px] slide-in-left'>
-                    <img src="curve1.png" alt="" />
+                    <div className='hidden overflow-hidden  lg:block absolute -left-96 -top-[500px] slide-in-left'>
+                    <img src="curve1copy.png" alt="" />
                     </div> 
 
 
