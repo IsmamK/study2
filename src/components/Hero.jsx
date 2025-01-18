@@ -1,28 +1,60 @@
 import React from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 
-const Hero = () => {
+const Hero = ({bgColor, textColor}) => {
   return (
     <>
   
-  <div
-  className="hero h-96  md:min-h-screen"
-  style={{
-    backgroundImage: "url(blackgrad.jpg)",
-  }}>
-    {/* <img src="goldsquare.png" alt="" /> */}
-  <div className="hero-overlay bg-opacity-0"></div>
-  <div className="hero-content text-neutral-content text-center">
-    <div className="">
-      <h1 className="mb-5 text-3xl md:text-5xl lg:text-9xl font-bold">Study Abroad!</h1>
-      <h1 className="mb-5 text-3xl md:text-5xl font-bold">Your dream begins here</h1>
-      <p className="mb-5 text-xs md:text-md">
+  <div className="hero  min-h-screen relative ">
+  <div className="hero-content flex-col lg:flex-row-reverse">
+  <div className="carousel carousel-center rounded-box max-w-md space-x-4 p-4">
+  <div className="carousel-item">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.webp"
+      className="rounded-box" />
+  </div>
+  <div className="carousel-item">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1565098772267-60af42b81ef2.webp"
+      className="rounded-box" />
+  </div>
+  <div className="carousel-item">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1572635148818-ef6fd45eb394.webp"
+      className="rounded-box" />
+  </div>
+  <div className="carousel-item">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1494253109108-2e30c049369b.webp"
+      className="rounded-box" />
+  </div>
+  <div className="carousel-item">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1550258987-190a2d41a8ba.webp"
+      className="rounded-box" />
+  </div>
+  <div className="carousel-item">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1559181567-c3190ca9959b.webp"
+      className="rounded-box" />
+  </div>
+  <div className="carousel-item">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1601004890684-d8cbf643f5f2.webp"
+      className="rounded-box" />
+  </div>
+</div>
+    <div>
+      <h1 className="text-5xl font-bold">Box Office News!</h1>
+      <p className="py-6">
         Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem
         quasi. In deleniti eaque aut repudiandae et a id nisi.
       </p>
-      <button className="btn bg-gold">Get Started</button>
+      <button className="btn btn-primary">Get Started</button>
     </div>
   </div>
+
+
 </div>
     </>
   );

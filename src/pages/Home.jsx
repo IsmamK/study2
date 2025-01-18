@@ -2,50 +2,30 @@ import React, { useState, useEffect } from 'react';
 import Hero from '../components/Hero';
 import Info from '../components/Info';
 import Cards from '../components/Cards';
-import CarouselComponent from '../components/Carousel';
+import CarouselComponent from '../components/CarouselComponent';
 
 const Home = () => {
-  const [isCardSectionVisible, setIsCardSectionVisible] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const cardSection = document.getElementById('card-section'); // Card section to stop scrolling
-
-      if (cardSection) {
-        const rect = cardSection.getBoundingClientRect();
-
-        // Detect if the card section is in view
-        if (rect.top <= 100 && rect.bottom >= 0) {
-          setIsCardSectionVisible(true);
-          document.body.style.overflow = 'hidden'; // Lock body scroll
-        } else {
-          setIsCardSectionVisible(false);
-          document.body.style.overflow = ''; // Unlock body scroll
-        }
-      }
-    };
-
-    // Add scroll listener
-    window.addEventListener('scroll', handleScroll);
-    
-    return () => {
-      // Cleanup scroll listener on component unmount
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const dividers = {
+    'wave-black': 'dividers/wavesblack.svg',
+    'wave-white': 'waveswhite.svg',
+    'triangle-black':'triangle-black.svg',
+    'triangle-white':'triangle-white.svg'
+  }
 
   return (
-    <div className="flex flex-col gap-0 bg-black min-h-screen">
+    <div className="">
       <CarouselComponent />
       <Hero />
-      <Info />
-      
-      {/* Card Section */}
-        <Cards />
+     
+     
+      {/* console.log(dividers['triangle-white']) */}
+      <Info divider={dividers['wave-white']}/>
 
-        <div className="h-96"></div>
-        <div className="h-96"></div>
-        <div className="h-96"></div>
+
+    
+     <Cards divider={dividers['wave-black']} />
+
 
      
     </div>
